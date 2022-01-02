@@ -1,0 +1,1 @@
+docker run -d -p 8123:8123 -p 9000:9000 -v $HOME/some_clickhouse_database:/var/lib/clickhouse/ -v $HOME/some_clickhouse_database/logs:/var/log/clickhouse-server/ -e CLICKHOUSE_DB=my_database -e CLICKHOUSE_USER=username -e CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1 -e CLICKHOUSE_PASSWORD=password --name some-clickhouse-server --ulimit nofile=262144:262144 clickhouse/clickhouse-server
